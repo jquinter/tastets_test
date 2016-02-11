@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="tastets">
+<head>		
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+	<link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.css" />
+	<script src="tastets.js"></script>
+</head>
+<body>	
+	<div ng-controller="DataController">
+		<center>
+			<p>
+				Actualizar cada <input ng-model="update_rate"></input> segundos
+				<br/>
+				<button ng-click="start()">Iniciar</button>
+				<button ng-click="stop()">Parar</button>
+			</p>
+		</center>
+    	<div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+    	<input ng-model="viewjson" type="checkbox">Ver datos transmitidos
+    	<pre ng-show="viewjson" style="height: 200px; overflow: scroll; border: 1px solid #cacaca">{{gridOptions.data|json}}</pre>
+    </div>
+</body>
