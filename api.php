@@ -38,7 +38,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'GET' ){
 	$limit = isset( $_REQUEST['limit'] ) ? $_REQUEST['limit'] : TOTAL_REGISTROS;
 	$sort = isset( $_REQUEST['sort'] ) ? $_REQUEST['sort'] : 'DESC';
 
-	for($i = 0; $i < $limit; $i++){
+	/*
+	Para simular "procesamiento" del servidor, 
+	crearé total_registros
+	*/
+	for($i = 0; $i < TOTAL_REGISTROS; $i++){
 		$datos[$i] = generaRegistro($i);
 		$fechas[$i] = $datos[$i]["fecha_actualizacion"];
 	}
