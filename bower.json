@@ -1,0 +1,26 @@
+{
+  "name": "tastets quick test",
+  "homepage": "https://github.com/jquinter/tastets_test",
+  "authors": [
+    "Julio Quinteros <jquinter@gmail.com>"
+  ],
+  "description": "A little and quick test, for tastets",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angularJS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-grid": "~3.1.1"
+  }
+}
